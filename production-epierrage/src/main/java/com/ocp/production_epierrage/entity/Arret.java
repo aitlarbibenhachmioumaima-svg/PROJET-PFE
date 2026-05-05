@@ -56,4 +56,5 @@ public abstract class Arret {
             this.duree = Math.round(minutes * 100.0 / 60) / 100.0;
         }
     }
+
 }
