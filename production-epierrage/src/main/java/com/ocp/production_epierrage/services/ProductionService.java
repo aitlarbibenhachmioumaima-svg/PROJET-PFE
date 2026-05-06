@@ -3,8 +3,8 @@ package com.ocp.production_epierrage.services;
 
 
 import lombok.RequiredArgsConstructor;
-import com.ocp.production_epierrage.dto.request.ProductionRequestDTO;
-import com.ocp.production_epierrage.dto.response.ProductionResponseDTO;
+import com.ocp.production_epierrage.dto.ProductionRequestDTO;
+import com.ocp.production_epierrage.dto.ProductionResponseDTO;
 import com.ocp.production_epierrage.entity.*;
 import com.ocp.production_epierrage.exception.*;
 import com.ocp.production_epierrage.mapper.ProductionMapper;

@@ -2,7 +2,7 @@ package com.ocp.production_epierrage.Mappers;
 
 
 
-import com.ocp.production_epierrage.dto.response.UtilisateurResponseDTO;
+import com.ocp.production_epierrage.dto.UtilisateurResponseDTO;
 import com.ocp.production_epierrage.entity.Utilisateur;
 import org.springframework.stereotype.Component;
 import java.util.stream.Collectors;

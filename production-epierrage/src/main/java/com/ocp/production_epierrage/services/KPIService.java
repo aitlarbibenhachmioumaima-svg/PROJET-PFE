@@ -3,10 +3,10 @@ package com.ocp.production_epierrage.services;
 
 
 import lombok.RequiredArgsConstructor;
-import com.ocp.production_epierrage.dto.request.KPIDetailRequestDTO;
-import com.ocp.production_epierrage.dto.request.KPIRequestDTO;
-import com.ocp.production_epierrage.dto.response.KPIGraphResponseDTO;
-import com.ocp.production_epierrage.dto.response.KPIResponseDTO;
+import com.ocp.production_epierrage.dto.KPIDetailRequestDTO;
+import com.ocp.production_epierrage.dto.KPIRequestDTO;
+import com.ocp.production_epierrage.dto.KPIGraphResponseDTO;
+import com.ocp.production_epierrage.dto.KPIResponseDTO;
 import com.ocp.production_epierrage.entity.*;
 import com.ocp.production_epierrage.exception.ResourceNotFoundException;
 import com.ocp.production_epierrage.mapper.KPIMapper;

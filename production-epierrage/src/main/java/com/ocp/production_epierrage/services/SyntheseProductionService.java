@@ -3,9 +3,9 @@ package com.ocp.production_epierrage.services;
 
 
 import lombok.RequiredArgsConstructor;
-import com.ocp.production_epierrage.dto.request.SyntheseDetailRequestDTO;
-import com.ocp.production_epierrage.dto.request.SyntheseProductionRequestDTO;
-import com.ocp.production_epierrage.dto.response.*;
+import com.ocp.production_epierrage.dto.SyntheseDetailRequestDTO;
+import com.ocp.production_epierrage.dto.SyntheseProductionRequestDTO;
+import com.ocp.production_epierrage.dto.*;
 import com.ocp.production_epierrage.entity.*;
 import com.ocp.production_epierrage.exception.ResourceNotFoundException;
 import com.ocp.production_epierrage.mapper.SyntheseMapper;

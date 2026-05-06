@@ -1,12 +1,16 @@
 package com.ocp.production_epierrage.services;
 
 
-import com.ocp.production_epierrage.dto.request.ArretRequest;
-import com.ocp.production_epierrage.dto.response.ArretResponse;
+import com.ocp.production_epierrage.dto.ArretRequest;
+import com.ocp.production_epierrage.dto.ArretResponse;
 import com.ocp.production_epierrage.entity.*;
 import com.ocp.production_epierrage.exceptions.*;
 import com.ocp.production_epierrage.mappers.ArretMapper;
 import com.ocp.production_epierrage.repositories.*;
+import com.ocp.production_epierrage.repository.ArretEpierrageRepository;
+import com.ocp.production_epierrage.repository.ArretRouePelleRepository;
+import com.ocp.production_epierrage.repository.TypeArretRepository;
+import com.ocp.production_epierrage.repository.UtilisateurRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

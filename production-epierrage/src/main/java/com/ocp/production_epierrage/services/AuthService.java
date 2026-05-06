@@ -3,9 +3,9 @@ package com.ocp.production_epierrage.services;
 
 
 import lombok.RequiredArgsConstructor;
-import com.ocp.production_epierrage.dto.request.ChangePasswordRequestDTO;
+import com.ocp.production_epierrage.dto.ChangePasswordRequestDTO;
 import com.ocp.production_epierrage.LoginRequestDTO;
-import com.ocp.production_epierrage.response.AuthResponseDTO;
+import com.ocp.production_epierrage.AuthResponseDTO;
 import com.ocp.production_epierrage.entity.Utilisateur;
 import com.ocp.production_epierrage.exception.BusinessException;
 import com.ocp.production_epierrage.exception.ResourceNotFoundException;

@@ -3,8 +3,8 @@ package com.ocp.production_epierrage.services;
 
 
 import lombok.RequiredArgsConstructor;
-import com.ocp.production_epierrage.dto.request.UtilisateurRequestDTO;
-import com.ocp.production_epierrage.dto.response.UtilisateurResponseDTO;
+import com.ocp.production_epierrage.dto.UtilisateurRequestDTO;
+import com.ocp.production_epierrage.dto.UtilisateurResponseDTO;
 import com.ocp.production_epierrage.entity.Role;
 import com.ocp.production_epierrage.entity.Utilisateur;
 import com.ocp.production_epierrage.exception.BusinessException;

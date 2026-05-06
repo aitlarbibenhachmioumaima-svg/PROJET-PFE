@@ -1,7 +1,7 @@
 package com.ocp.production_epierrage.Mappers;
 
 
-import com.ocp.production_epierrage.dto.response.ProductionResponseDTO;
+import com.ocp.production_epierrage.dto.ProductionResponseDTO;
 import com.ocp.production_epierrage.entity.Production;
 import org.springframework.stereotype.Component;
 
