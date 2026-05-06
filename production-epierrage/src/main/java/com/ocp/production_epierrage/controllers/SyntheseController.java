@@ -1,13 +1,14 @@
 package com.ocp.production_epierrage.controllers;
 
 
+import com.ocp.production_epierrage.dto.SyntheseResponseDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import com.ocp.production_epierrage.dto.request.SyntheseProductionRequestDTO;
-import com.ocp.production_epierrage.dto.response.*;
+import com.ocp.production_epierrage.dto.SyntheseProductionRequestDTO;
+import com.ocp.production_epierrage.dto.*;
 import com.ocp.production_epierrage.services.SyntheseProductionService;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
