@@ -5,7 +5,9 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "syntheses_production")
@@ -29,4 +31,17 @@ public class SyntheseProduction {
     @OneToMany(mappedBy = "synthese", cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
     private List<SyntheseDetail> details = new ArrayList<>();
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "synthese_utilisateurs",
+            joinColumns = @JoinColumn(name = "synthese_id"),
+            inverseJoinColumns = @JoinColumn(name = "utilisateur_id")
+    )
+    @Builder.Default
+    private Set<Utilisateur> utilisateurs = new HashSet<>();
+
+
+
+
 }

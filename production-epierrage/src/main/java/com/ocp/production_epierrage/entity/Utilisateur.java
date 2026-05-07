@@ -66,11 +66,8 @@ public class Utilisateur {
     @Builder.Default
     private List<EtatEpierrage> etats = new ArrayList<>();
 
-    // Relation : Utilisateur visualise KPI (1 → 0..*)
-    // (non mappé directement ici, géré via KPI.utilisateur)
 
-    // Relation : Utilisateur consulte SyntheseProduction (1 → 0..*)
-    @OneToMany(mappedBy = "operateur", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToMany(mappedBy = "utilisateurs", fetch = FetchType.LAZY)
     @Builder.Default
-    private List<SyntheseProduction> syntheses = new ArrayList<>();
+    private Set<SyntheseProduction> syntheses = new HashSet<>();
 }
