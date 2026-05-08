@@ -18,16 +18,13 @@ public class SyntheseProduction {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Attributs exacts du diagramme (table SyntheseProduction)
+
     @Column(name = "date_locale")
-    private LocalDate dateLocale;          // date
+    private LocalDate dateLocale;
 
-    // Relation : operateur_id (FK) → Utilisateur
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "operateur_id")
-    private Utilisateur operateur;
 
-    // Relation : SyntheseProduction → SyntheseDetail  (1 → 1..*)
+
+
     @OneToMany(mappedBy = "synthese", cascade = CascadeType.ALL, orphanRemoval = true)
     @Builder.Default
     private List<SyntheseDetail> details = new ArrayList<>();

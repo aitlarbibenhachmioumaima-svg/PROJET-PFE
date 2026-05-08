@@ -15,7 +15,7 @@ public class Tas {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Attributs exacts du diagramme
+
     @Column(name = "numero_du_tas")
     private Integer numeroDuTas;
 
@@ -25,16 +25,16 @@ public class Tas {
     private Double tonnage;
 
     @Column(name = "statut_couleur")
-    private String statutCouleur;       // ROUGE, JAUNE, VERT, BLANC
+    private String statutCouleur;
 
-    private String zone;                // A1, A2, B1, B2
+    private String zone;
 
-    // Relation ManyToOne : Tas → TypeQualite (qualite_id FK, 0..* → 1)
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "qualite_id")
     private TypeQualite qualite;
 
-    // Relation inverse : Tas est référencé par EtatEpierrage (1..*  → 1)
+
     @OneToMany(mappedBy = "tas", fetch = FetchType.LAZY)
     private List<EtatEpierrage> etats;
 }
