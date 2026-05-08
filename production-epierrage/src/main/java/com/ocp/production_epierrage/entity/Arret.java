@@ -4,6 +4,7 @@ package com.ocp.production_epierrage.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 @Entity
 @Table(name = "arrets")
@@ -17,10 +18,10 @@ public abstract class Arret {
 
 
     @Column(name = "date_debut")
-    private LocalDateTime dateDebut;
+    private LocalTime dateDebut;
 
     @Column(name = "date_fin")
-    private LocalDateTime dateFin;
+    private LocalTime dateFin;
 
     private Double duree;
 
@@ -52,7 +53,7 @@ public abstract class Arret {
     public void calculerDuree() {
         if (dateDebut != null && dateFin != null) {
             long minutes = java.time.Duration.between(dateDebut, dateFin).toMinutes();
-            if (minutes < 0) minutes += 1440; // passage minuit
+            if (minutes < 0) minutes += 1440;
             this.duree = Math.round(minutes * 100.0 / 60) / 100.0;
         }
     }

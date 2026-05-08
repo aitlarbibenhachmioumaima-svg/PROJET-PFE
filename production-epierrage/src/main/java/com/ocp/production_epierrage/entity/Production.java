@@ -3,7 +3,8 @@ package com.ocp.production_epierrage.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Entity
 @Table(name = "productions")
@@ -16,7 +17,7 @@ public class Production {
 
 
     @Column(name = "date_locale")
-    private LocalDateTime dateLocale;
+    private LocalDate dateLocale;
     private Integer poste;
 
     private String couche;
@@ -61,10 +62,10 @@ public class Production {
     private Double debit;
 
     @Column(name = "debut_stockage")
-    private LocalDateTime debutStockage;
+    private LocalTime debutStockage;
 
     @Column(name = "fin_stockage")
-    private LocalDateTime finStockage;
+    private LocalTime finStockage;
 
     private Double hm;
 
