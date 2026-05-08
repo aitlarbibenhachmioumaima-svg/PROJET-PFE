@@ -4,7 +4,7 @@ package com.ocp.production_epierrage.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -39,7 +39,7 @@ public class Utilisateur {
 
     @Column(name = "date_creation")
     @Builder.Default
-    private LocalDateTime dateCreation = LocalDateTime.now();
+    private LocalDate dateCreation = LocalDate.now();
 
 
     @ManyToMany(fetch = FetchType.EAGER)
