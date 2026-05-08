@@ -15,14 +15,14 @@ public class IndicateurSynthese {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Attributs exacts du diagramme (table IndicateurSynthese)
-    @Column(unique = true, nullable = false)
-    private String libelle;    // THE, THC, HM, Rendement
 
     @Column(unique = true, nullable = false)
-    private String code;       // THE, THC, HM, REND
+    private String libelle;
 
-    // Relation inverse : IndicateurSynthese référencé par SyntheseDetail (0..* → 1)
+    @Column(unique = true, nullable = false)
+    private String code;
+
+
     @OneToMany(mappedBy = "indicateur", fetch = FetchType.LAZY)
     private List<SyntheseDetail> details;
 }

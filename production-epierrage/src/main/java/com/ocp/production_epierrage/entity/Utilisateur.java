@@ -19,7 +19,7 @@ public class Utilisateur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Attributs exacts du diagramme
+
     @Column(unique = true, nullable = false)
     private String login;
 
@@ -41,27 +41,27 @@ public class Utilisateur {
     @Builder.Default
     private LocalDateTime dateCreation = LocalDateTime.now();
 
-    // Relation ManyToMany via table UtilisateurRole (table de jointure visible dans diagramme)
+
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
-            name = "utilisateur_roles",              // table UtilisateurRole du diagramme
-            joinColumns = @JoinColumn(name = "utilisateur_id"),   // FK1
-            inverseJoinColumns = @JoinColumn(name = "role_id")    // FK2
+            name = "utilisateur_roles",
+            joinColumns = @JoinColumn(name = "utilisateur_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     @Builder.Default
     private Set<Role> roles = new HashSet<>();
 
-    // Relation : Utilisateur saisit Production (1 → 0..*)
+
     @OneToMany(mappedBy = "operateur", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @Builder.Default
     private List<Production> productions = new ArrayList<>();
 
-    // Relation : Utilisateur enregistre Arret (1 → 0..*)
+
     @OneToMany(mappedBy = "utilisateur", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @Builder.Default
     private List<Arret> arrets = new ArrayList<>();
 
-    // Relation : Utilisateur saisit/porte EtatEpierrage (1 → 0..*)
+
     @OneToMany(mappedBy = "utilisateur", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @Builder.Default
     private List<EtatEpierrage> etats = new ArrayList<>();

@@ -15,14 +15,14 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Attributs exacts du diagramme
-    @Column(unique = true, nullable = false)
-    private String libelle;   // ADMIN, Chef de Poste, Opérateur, Responsable
 
     @Column(unique = true, nullable = false)
-    private String code;      // ADMIN, CDP, OPE, RESP
+    private String libelle;
 
-    // Relation inverse (optionnelle, non visible dans diagramme mais utile)
+    @Column(unique = true, nullable = false)
+    private String code;
+
+
     @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
     private List<Utilisateur> utilisateurs;
 }

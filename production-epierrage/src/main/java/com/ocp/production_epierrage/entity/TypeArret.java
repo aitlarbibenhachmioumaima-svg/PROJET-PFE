@@ -15,14 +15,14 @@ public class TypeArret {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Attributs exacts du diagramme
-    @Column(unique = true, nullable = false)
-    private String libelle;     // Mécanique, Électrique, Exploitation, Koch...
 
     @Column(unique = true, nullable = false)
-    private String code;        // MEC, ELEC, EXP, MAT, KOCH, PLANIF, EXT...
+    private String libelle;
 
-    // Relation inverse : TypeArret référencé par Arret (0..* → 1)
+    @Column(unique = true, nullable = false)
+    private String code;
+
+
     @OneToMany(mappedBy = "type", fetch = FetchType.LAZY)
     private List<Arret> arrets;
 }
