@@ -2,7 +2,7 @@ package com.ocp.production_epierrage.repository;
 
 
 import com.ocp.production_epierrage.entity.Production;
-import com.ocp.production_epierrage.entity.Statut;
+import com.ocp.production_epierrage.entity.StatutEnum;
 import com.ocp.production_epierrage.entity.Utilisateur;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -22,7 +22,7 @@ public interface ProductionRepository extends JpaRepository<Production, Long> {
     List<Production> findByPosteAndDateLocaleBetween(
             Integer poste, LocalDateTime debut, LocalDateTime fin);
 
-    List<Production> findByStatut(Statut statut);
+    List<Production> findByStatut(StatutEnum statut);
 
     @Query("SELECT SUM(p.thc) FROM Production p " +
             "WHERE p.dateLocale BETWEEN :d AND :f")

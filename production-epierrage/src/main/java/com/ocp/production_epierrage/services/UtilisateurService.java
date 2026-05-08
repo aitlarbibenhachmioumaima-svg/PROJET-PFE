@@ -9,7 +9,7 @@ import com.ocp.production_epierrage.entity.Role;
 import com.ocp.production_epierrage.entity.Utilisateur;
 import com.ocp.production_epierrage.exception.BusinessException;
 import com.ocp.production_epierrage.exception.ResourceNotFoundException;
-import com.ocp.production_epierrage.mapper.UtilisateurMapper;
+import com.ocp.production_epierrage.mappers.UtilisateurMapper;
 import com.ocp.production_epierrage.repository.RoleRepository;
 import com.ocp.production_epierrage.repository.UtilisateurRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;

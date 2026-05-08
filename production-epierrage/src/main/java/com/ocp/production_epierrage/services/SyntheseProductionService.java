@@ -8,7 +8,7 @@ import com.ocp.production_epierrage.dto.SyntheseProductionRequestDTO;
 import com.ocp.production_epierrage.dto.*;
 import com.ocp.production_epierrage.entity.*;
 import com.ocp.production_epierrage.exception.ResourceNotFoundException;
-import com.ocp.production_epierrage.mapper.SyntheseMapper;
+import com.ocp.production_epierrage.mappers.SyntheseMapper;
 import com.ocp.production_epierrage.repository.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

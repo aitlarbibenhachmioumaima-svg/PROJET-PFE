@@ -1,8 +1,8 @@
 package com.ocp.production_epierrage.services;
 
 
-import com.ocp.production_epierrage.dto.ArretRequest;
-import com.ocp.production_epierrage.dto.ArretResponse;
+import com.ocp.production_epierrage.dto.ArretRequestDTO;
+import com.ocp.production_epierrage.dto.ArretResponseDTO;
 import com.ocp.production_epierrage.entity.*;
 import com.ocp.production_epierrage.exception.*;
 import com.ocp.production_epierrage.mappers.ArretMapper;

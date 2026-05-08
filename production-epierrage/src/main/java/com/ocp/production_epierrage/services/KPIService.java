@@ -9,7 +9,7 @@ import com.ocp.production_epierrage.dto.KPIGraphResponseDTO;
 import com.ocp.production_epierrage.dto.KPIResponseDTO;
 import com.ocp.production_epierrage.entity.*;
 import com.ocp.production_epierrage.exception.ResourceNotFoundException;
-import com.ocp.production_epierrage.mapper.KPIMapper;
+import com.ocp.production_epierrage.mappers.KPIMapper;
 import com.ocp.production_epierrage.repository.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

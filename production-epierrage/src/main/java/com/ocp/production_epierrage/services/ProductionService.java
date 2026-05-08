@@ -7,7 +7,7 @@ import com.ocp.production_epierrage.dto.ProductionRequestDTO;
 import com.ocp.production_epierrage.dto.ProductionResponseDTO;
 import com.ocp.production_epierrage.entity.*;
 import com.ocp.production_epierrage.exception.*;
-import com.ocp.production_epierrage.mapper.ProductionMapper;
+import com.ocp.production_epierrage.mappers.ProductionMapper;
 import com.ocp.production_epierrage.repository.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,7 +26,7 @@ public class ProductionService {
     private final StatutRepository statutRepository;
     private final ProductionMapper mapper;
 
-    private Statut getBrouillon() {
+    private StatutEnum getBrouillon() {
         return statutRepository.findByCode("BROUILLON")
                 .orElseThrow(() -> new ResourceNotFoundException("Statut BROUILLON introuvable"));
     }

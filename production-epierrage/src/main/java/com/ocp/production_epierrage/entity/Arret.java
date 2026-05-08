@@ -15,38 +15,38 @@ public abstract class Arret {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Attributs exacts de la table Arret dans le diagramme image 1
+
     @Column(name = "date_debut")
-    private LocalDateTime dateDebut;     // datetime
+    private LocalDateTime dateDebut;
 
     @Column(name = "date_fin")
-    private LocalDateTime dateFin;       // datetime
+    private LocalDateTime dateFin;
 
-    private Double duree;                // decimal (calculé)
+    private Double duree;
 
-    // Relation : type_id (FK) → TypeArret  (0..* → 1)
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "type_id")
     private TypeArret type;
 
-    private String cause;                // varchar
+    private String cause;
 
-    private String equipement;           // varchar
+    private String equipement;
 
     @Column(columnDefinition = "text")
-    private String description;          // text
+    private String description;
 
-    // Relation : utilisateur_id (FK) → Utilisateur
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "utilisateur_id")
     private Utilisateur utilisateur;
 
-    // Relation : statut_id (FK) → Statut
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "statut_id")
-    private Statut statut;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "statut", length = 20)
+    private StatutEnum statut = StatutEnum.BROUILLON;
 
-    // Calcul automatique de la durée
+
+
     @PrePersist
     @PreUpdate
     public void calculerDuree() {
