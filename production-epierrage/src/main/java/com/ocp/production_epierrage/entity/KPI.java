@@ -23,9 +23,7 @@ public class KPI {
     private Integer semaine;
 
 
-    @OneToMany(mappedBy = "kpi", cascade = CascadeType.ALL, orphanRemoval = true)
-    @Builder.Default
-    private List<KPIDetail> details = new ArrayList<>();
+
 
 
     @ManyToOne(fetch = FetchType.LAZY)

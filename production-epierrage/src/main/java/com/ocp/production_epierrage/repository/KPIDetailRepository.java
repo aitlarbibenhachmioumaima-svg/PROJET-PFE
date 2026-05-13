@@ -3,8 +3,6 @@ package com.ocp.production_epierrage.repository;
 
 
 import com.ocp.production_epierrage.entity.KPI;
-import com.ocp.production_epierrage.entity.KPIDetail;
-import com.ocp.production_epierrage.entity.KPIType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

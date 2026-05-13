@@ -9,7 +9,6 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import com.ocp.production_epierrage.dto.ProductionRequestDTO;
 import com.ocp.production_epierrage.dto.ProductionResponseDTO;
-import com.ocp.production_epierrage.services.ProductionService;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;

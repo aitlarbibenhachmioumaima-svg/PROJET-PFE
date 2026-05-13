@@ -4,7 +4,6 @@ package com.ocp.production_epierrage.mappers;
 
 import com.ocp.production_epierrage.dto.response.SyntheseDetailResponseDTO;
 import com.ocp.production_epierrage.dto.response.SyntheseResponseDTO;
-import com.ocp.production_epierrage.entity.SyntheseProduction;
 import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.stream.Collectors;

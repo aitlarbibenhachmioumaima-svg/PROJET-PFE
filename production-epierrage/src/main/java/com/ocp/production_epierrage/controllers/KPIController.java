@@ -10,7 +10,6 @@ import lombok.RequiredArgsConstructor;
 import com.ocp.production_epierrage.dto.KPIRequestDTO;
 import com.ocp.production_epierrage.dto.KPIGraphResponseDTO;
 import com.ocp.production_epierrage.dto.KPIResponseDTO;
-import com.ocp.production_epierrage.services.KPIService;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.*;
 import org.springframework.security.access.prepost.PreAuthorize;

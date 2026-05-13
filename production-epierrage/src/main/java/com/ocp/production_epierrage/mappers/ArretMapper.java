@@ -4,8 +4,6 @@ package com.ocp.production_epierrage.mappers;
 
 import com.ocp.production_epierrage.dto.ArretResponseDTO;
 import com.ocp.production_epierrage.entity.Arret;
-import com.ocp.production_epierrage.entity.ArretEpierrage;
-import com.ocp.production_epierrage.entity.ArretRouePelle;
 import org.springframework.stereotype.Component;
 
 @Component

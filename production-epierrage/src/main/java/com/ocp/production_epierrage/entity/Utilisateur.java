@@ -70,4 +70,10 @@ public class Utilisateur {
     @ManyToMany(mappedBy = "utilisateurs", fetch = FetchType.LAZY)
     @Builder.Default
     private Set<SyntheseProduction> syntheses = new HashSet<>();
+
+    @OneToMany(mappedBy = "utilisateur", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @Builder.Default
+    private List<KPI> kpis= new ArrayList<>();
+
+
 }

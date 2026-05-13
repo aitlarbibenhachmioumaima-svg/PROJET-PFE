@@ -2,7 +2,6 @@ package com.ocp.production_epierrage.repository;
 
 
 import com.ocp.production_epierrage.entity.Arret;
-import com.ocp.production_epierrage.entity.TypeArret;
 import com.ocp.production_epierrage.entity.Utilisateur;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

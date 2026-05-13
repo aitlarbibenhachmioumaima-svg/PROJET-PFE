@@ -23,6 +23,5 @@ public class Role {
     private String code;
 
 
-    @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
-    private List<Utilisateur> utilisateurs;
+
 }

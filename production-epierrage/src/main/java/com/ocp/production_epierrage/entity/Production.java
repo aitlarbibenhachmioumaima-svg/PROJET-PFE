@@ -15,43 +15,30 @@ public class Production {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     @Column(name = "date_locale")
     private LocalDate dateLocale;
+
     private Integer poste;
+
+    private String chefPoste;
 
     private String couche;
 
     private String origine;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "qualite_id")
-    private TypeQualite qualite;
-
     private String emplacement;
+
     @Column(name = "code_echantillon")
     private String codeEchantillon;
 
     @Column(name = "code_sct")
-    private String codeSct;
+    private String OCPSCT;
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "statut", length = 20)
-    private StatutEnum statut = StatutEnum.BROUILLON;
+    private String qualité;
 
-    @ManyToOne
-    @JoinColumn(name = "operateur_id")
-    private Utilisateur operateur;
+    private String stacker;
 
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "stacker_id")
-    private Tas stacker;
-
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "chaine_id")
-    private Tas chaine;
+    private  String chaine;
 
     private Double the;
 
@@ -75,9 +62,18 @@ public class Production {
     private String commentaire;
 
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "statut", length = 20)
+    private StatutEnum statut = StatutEnum.BROUILLON;
 
+    @ManyToOne
+    @JoinColumn(name = "operateur_id")
+    private Utilisateur operateur;
     @PrePersist
     @PreUpdate
+
+
+
     public void calculer() {
         if (the != null && coefficient != null)
             this.thc = Math.round(the * coefficient * 100.0) / 100.0;
