@@ -1,26 +1,60 @@
 package com.ocp.production_epierrage.dto;
 
-import java.time.LocalDateTime;
+
+import com.ocp.production_epierrage.entity.Statut;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public record ProductionResponseDTO(
+
         Long id,
-        LocalDateTime dateLocale,
+
+        LocalDate dateLocale,
+
         Integer poste,
+
+        String chefPoste,
+
         String couche,
+
         String origine,
-        String qualiteLibelle,
+
         String emplacement,
+
         String codeEchantillon,
-        String codeSct,
+
+        String OCPSCT,
+
+        String qualité,
+
+        String stacker,
+
+        String chaine,
+
         Double the,
+
         Double coefficient,
+
         Double thc,
-        LocalDateTime debutStockage,
-        LocalDateTime finStockage,
-        Double hm,
+
         Double debit,
+
+        Double hm,
+
         String etat,
+
         String commentaire,
-        String statutLibelle,
-        String operateurLogin
-) {}
+
+        LocalTime debutStockage,
+
+        LocalTime finStockage,
+
+        Statut statut,
+
+        Long operateurId,
+
+        String nomOperateur
+
+) {
+}

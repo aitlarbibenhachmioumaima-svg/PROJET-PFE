@@ -1,24 +1,54 @@
 package com.ocp.production_epierrage.dto;
 
-import jakarta.validation.constraints.*;
-import java.time.LocalDateTime;
+
+import com.ocp.production_epierrage.entity.Statut;
+import jakarta.validation.constraints.NotNull;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 public record ProductionRequestDTO(
-        @NotNull(message = "La date est obligatoire") LocalDateTime dateLocale,
-        @NotNull @Min(1) @Max(3) Integer poste,
+
+        @NotNull(message = "La date est obligatoire")
+        LocalDate dateLocale,
+
+        Integer poste,
+
+        String chefPoste,
+
         String couche,
+
         String origine,
-        Long qualiteId,
+
         String emplacement,
+
         String codeEchantillon,
-        String codeSct,
-        @NotNull @DecimalMin("0.0") Double the,
+
+        String OCPSCT,
+
+        String qualité,
+
+        String stacker,
+
+        String chaine,
+
+        Double the,
+
         Double coefficient,
-        LocalDateTime debutStockage,
-        LocalDateTime finStockage,
-        @DecimalMin("0.0") Double hm,
+
+        Double hm,
+
         String etat,
+
         String commentaire,
-        Long statutId,
+
+        LocalTime debutStockage,
+
+        LocalTime finStockage,
+
+        Statut statut,
+
         Long operateurId
-) {}
+
+) {
+}
