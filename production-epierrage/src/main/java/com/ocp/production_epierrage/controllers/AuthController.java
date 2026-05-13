@@ -8,7 +8,6 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import com.ocp.production_epierrage.dto.ChangePasswordRequestDTO;
 import com.ocp.production_epierrage.dto.LoginRequestDTO;
-import com.ocp.production_epierrage.dto.AuthResponseDTO;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;

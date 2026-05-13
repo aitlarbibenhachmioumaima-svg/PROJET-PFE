@@ -8,7 +8,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import com.ocp.production_epierrage.dto.KPIRequestDTO;
-import com.ocp.production_epierrage.dto.KPIGraphResponseDTO;
 import com.ocp.production_epierrage.dto.KPIResponseDTO;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.*;

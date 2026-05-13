@@ -64,7 +64,7 @@ public class Production {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "statut", length = 20)
-    private StatutEnum statut = StatutEnum.BROUILLON;
+    private Statut statut = Statut.BROUILLON;
 
     @ManyToOne
     @JoinColumn(name = "operateur_id")

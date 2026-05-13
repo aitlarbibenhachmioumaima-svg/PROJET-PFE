@@ -1,7 +1,6 @@
 package com.ocp.production_epierrage.mappers;
 
 
-import com.ocp.production_epierrage.dto.KPIDetailResponseDTO;
 import com.ocp.production_epierrage.dto.KPIResponseDTO;
 import com.ocp.production_epierrage.entity.KPI;
 import org.springframework.stereotype.Component;

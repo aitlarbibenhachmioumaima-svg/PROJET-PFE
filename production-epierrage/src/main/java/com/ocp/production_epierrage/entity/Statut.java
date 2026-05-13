@@ -1,6 +1,6 @@
 package com.ocp.production_epierrage.entity;
 
-public enum StatutEnum {
+public enum Statut {
     BROUILLON,
     TERMINE,
     VALIDE
